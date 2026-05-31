@@ -7,7 +7,7 @@ const intlMiddleware = createMiddleware({ ...routing, localeDetection: false });
 
 const authRoutes = ["/login", "/register"];
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
     const intlResponse = intlMiddleware(request);
 
     let supabaseResponse = intlResponse || NextResponse.next({ request });

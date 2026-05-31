@@ -1,11 +1,8 @@
-import React from 'react'
+import { ProjectForm } from "@/features/projects/components/ProjectForm";
+import React from "react";
 
 const CreateProjectPage = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <ProjectForm action="create" />;
+};
 
-export default CreateProjectPage
+export default CreateProjectPage;

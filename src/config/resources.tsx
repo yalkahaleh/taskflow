@@ -1,5 +1,5 @@
 import { ResourceProps } from "@refinedev/core";
-import { FolderIcon, CheckSquareIcon, UsersIcon } from "lucide-react";
+import { FolderIcon, CheckSquare, UsersIcon } from "lucide-react";
 
 export const resources: ResourceProps[] = [
   {
@@ -16,9 +16,12 @@ export const resources: ResourceProps[] = [
   {
     name: "tasks",
     list: "/tasks",
+    create: "/tasks/create",
+    edit: "/tasks/:id/edit",
+    show: "/tasks/:id/show",
     meta: {
       label: "Tasks",
-      icon: <CheckSquareIcon />,
+      icon: <CheckSquare />,
     },
   },
   {

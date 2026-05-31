@@ -1,7 +1,7 @@
-import React from "react";
+import { TaskList } from "@/features/tasks/components/TaskList";
 
 const TasksPage = () => {
-  return <div></div>;
+  return <TaskList />;
 };
 
 export default TasksPage;

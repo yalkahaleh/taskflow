@@ -1,20 +1,8 @@
 "use client";
-import { useList } from "@refinedev/core";
+import { ProjectList } from "@/features/projects/components/ProjectList";
 
 const ProjectsPage = () => {
-  const { query } = useList({
-    resource: "projects",
-  });
-
-  if (query.isLoading) return <div>Loading...</div>;
-  if (query.isError) return <div>Error!</div>;
-
-  return (
-    <div>
-      <h1>Projects</h1>
-      <pre>{JSON.stringify(query.data, null, 2)}</pre>
-    </div>
-  );
+  return <ProjectList />;
 };
 
 export default ProjectsPage;
