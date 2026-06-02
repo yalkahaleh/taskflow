@@ -33,8 +33,8 @@ export function TaskForm({ action, id }: TaskFormProps) {
       status: "todo",
       priority: "medium",
       project_id: "",
-      assignee_id: null,
-      due_date: null,
+      assignee_id: "",
+      due_date: "null",
     },
     refineCoreProps: {
       resource: "tasks",
