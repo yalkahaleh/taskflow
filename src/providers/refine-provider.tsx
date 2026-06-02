@@ -6,6 +6,7 @@ import routerProvider from "@refinedev/nextjs-router";
 import { createClient } from "@/lib/supabase/client";
 import { resources } from "@/config/resources";
 import { authProvider } from "./auth-provider";
+import { accessControlProvider } from "./access-control-provider";
 
 const supabaseClient = createClient();
 
@@ -20,6 +21,7 @@ export default function RefineProvider({
       liveProvider={liveProvider(supabaseClient)}
       routerProvider={routerProvider}
       authProvider={authProvider}
+      accessControlProvider={accessControlProvider}
       resources={resources}
       options={{
         syncWithLocation: true,

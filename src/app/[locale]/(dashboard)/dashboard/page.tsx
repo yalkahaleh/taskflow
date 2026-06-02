@@ -1,7 +1,8 @@
+import { DashboardStats } from "@/features/dashboard/components/DashboardStats";
 import React from "react";
 
 const DashboardPage = () => {
-  return <div></div>;
+  return <DashboardStats />;
 };
 
 export default DashboardPage;
