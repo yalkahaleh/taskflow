@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   description: "Project Management App",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params?.locale ?? "en";
+  const { locale } = await params;
   const dir = locale === "ar" ? "rtl" : "ltr";
 
   return (
